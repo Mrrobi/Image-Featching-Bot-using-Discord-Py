@@ -9,10 +9,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 client = commands.Bot(command_prefix="?")
-team_member = []
-member_list = []
-team_one = []
-team_two = []
 
 @client.event
 async def on_ready():
@@ -20,7 +16,6 @@ async def on_ready():
 
 @client.command()
 async def h(ctx):
-    # if ctx.message.author.permissions_in(ctx.message.channel):
     await ctx.send(f"1. ?insta <insta photo link>\n2. ?dlink <direct photolink (Any)>\n<@{ctx.message.author.id}>")
 
 @client.command()
@@ -34,7 +29,6 @@ async def dlink(ctx,arg):
 
 @client.command()
 async def insta(ctx,arg):
-    # if ctx.message.author.administrator:
     DRIVER_PATH = '.\chrome_driver\chromedriver.exe'
     options = Options()
     options.headless = True
