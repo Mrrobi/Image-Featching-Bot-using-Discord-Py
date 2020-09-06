@@ -21,7 +21,7 @@ async def on_ready():
 @client.command()
 async def h(ctx):
     # if ctx.message.author.permissions_in(ctx.message.channel):
-    await ctx.send(f"1. ?insta <insta photo link>\n2. dlink <direct photolink (Any)>\n<@{ctx.message.author.id}>")
+    await ctx.send(f"1. ?insta <insta photo link>\n2. ?dlink <direct photolink (Any)>\n<@{ctx.message.author.id}>")
 
 @client.command()
 async def dlink(ctx,arg):
@@ -35,7 +35,7 @@ async def dlink(ctx,arg):
 @client.command()
 async def insta(ctx,arg):
     # if ctx.message.author.administrator:
-    DRIVER_PATH = '.\chromedriver_win32\chromedriver.exe'
+    DRIVER_PATH = '.\chrome_driver\chromedriver.exe'
     options = Options()
     options.headless = True
     #options.add_argument("--window-size=1920,1200")
@@ -54,4 +54,4 @@ async def insta(ctx,arg):
                 await ctx.send(file=discord.File(data, 'cool_image.png'))
     # await ctx.send(f"# i am undergoing construction <@{751134170499252244}>"+arg)
 
-client.run("NzUxMTM0MTcwNDk5MjUyMjQ0.X1EqNQ.iDzeJPP47zWkXzZuKcTs4oODzdM")
+client.run("YOUR BOT TOKEN")
